@@ -1,8 +1,8 @@
 //Users can see the sum of all prices
 var sumAll = function(options) {
   var total = 0;
-    while (total < options.length) {
-    total += options;
+    for (var i = 0; i < options.length; i++) {
+    total += options[i];
     }
     return total;
   };
@@ -10,19 +10,19 @@ sumAll();
 
 //Users can see the number of prices that are selected (the count)
 var numPrices = function(options) {
-  var count = 0
-    while (count < options.length) {
-    count += options;
+  var count = 0;
+    for (var i = 1; count < options.length; i++) {
+    count += i;
   }
   return count;
 };
 numPrices();
 
 //Users can see the sum of the selected prices
-var selectedSum = function(options) {
+var selectedSum = function(selectedPrices) {
   var totalSelected = 0;
-  while (i < options.length) {
-    totalSelected += options;
+  for (i = 0; i < selectedPrices.length; i++) {
+    totalSelected += selectedPrices[i];
     }
     return totalSelected;
   };
@@ -32,8 +32,8 @@ selectedSum();
 var averagePrice = function(options) {
   var total = 0;
   var average = 0;
-  while (i < options.length) {
-    total += options;
+  for (var i = 0; i < options.length; i++) {
+    total += options[i];
     average = total/options.length;
     }
   return average;
