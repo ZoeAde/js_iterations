@@ -41,4 +41,34 @@ var averagePrice = function(options) {
 averagePrice();
 
 
+//NAMES functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Rewrite all functions in js/logic.js to not use any for or while loops.
