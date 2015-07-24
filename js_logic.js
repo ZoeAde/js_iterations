@@ -12,7 +12,7 @@ var sumAll = function(options) {
 //Users can see the number of prices that are selected (the count)
 var numPrices = function(options) {
   var count = 0;
-    for (var i = 1; count < options.length; i++) {
+    for (var i = 0; count < options.length - 1; i++) {
     count += i;
   }
   return count;

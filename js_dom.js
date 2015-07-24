@@ -24,15 +24,6 @@ sumAllBtn.onclick = sumButtonClick;
 function countButtonClick() {
   answerBtn.innerHTML = numPrices(prices);
 }
-countSelectedBtn.addEventListener("click", numPrices(prices);
-sumAllBtn.onclick = countButtonClick;
+countSelectedBtn.addEventListener("click", numPrices(prices));
+countSelectedBtn.onclick = countButtonClick;
 
-
-
-var numPrices = function(options) {
-  var count = 0;
-    for (var i = 1; count < options.length; i++) {
-    count += i;
-  }
-  return count;
-};
