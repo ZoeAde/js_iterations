@@ -10,7 +10,7 @@ var sumAll = function(options) {
 
 
 //Users can see the number of prices that are selected (the count)
-var numPrices = function(options) {
+var countPrices = function(options) {
   var count = 0;
     for (var i = 0; count < options.length - 1; i++) {
     count += i;
@@ -23,7 +23,7 @@ var numPrices = function(options) {
 var selectedSum = function(selectedPrices) {
   var totalSelected = 0;
   for (i = 0; i < selectedPrices.length; i++) {
-    totalSelected += selectedPrices[i];
+    totalSelected += parseInt(selectedPrices[i].value);
     }
     return totalSelected;
   };
@@ -34,7 +34,7 @@ var averagePrice = function(options) {
   var total = 0;
   var average = 0;
   for (var i = 0; i < options.length; i++) {
-    total += options[i];
+    total += parseInt(options[i].value);
     average = total/options.length;
     }
   return average;

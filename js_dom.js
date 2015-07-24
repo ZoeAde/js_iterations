@@ -12,37 +12,48 @@ var answerBtn = document.getElementById('answer-box');
 
 var prices = document.getElementsByTagName('option');
 
-//SumAll Values
-function sumButtonClick() {
-  answerBtn.innerHTML = sumAll(prices);
-}
-sumAllBtn.addEventListener("click", sumAll(prices));
-sumAllBtn.onclick = sumButtonClick;
+// //SumAll Values
+var sumAllClick = sumAllBtn.addEventListener("click", function(){
+var totalNums = document.getElementsByTagName("select")[0];
+var totalAnswer = sumAll(totalNums);
+answerBtn.innerHTML = totalAnswer;
+});
 
+//CountSelected
+var countSelectedClick = countSelectedBtn.addEventListener("click", function(){
+var selectedNums = document.getElementsByTagName("select")[0];
+var getSelectedOptions = selectedNums.selectedOptions;
+console.log(getSelectedOptions);
+var selectedAnswer = countPrices(getSelectedOptions);
+console.log(selectedAnswer);
+  answerBtn.innerHTML = selectedAnswer;
+});
 
+//SumSelected
+var sumSelectedClick = sumSelectedBtn.addEventListener("click", function(){
+var selectedNums = document.getElementsByTagName("select")[0];
+var getSelectedOptions = selectedNums.selectedOptions;
+console.log(getSelectedOptions);
+var selectedAnswer = selectedSum(getSelectedOptions);
+console.log(selectedAnswer);
+  answerBtn.innerHTML = selectedAnswer;
+});
 
+//AverageAll
+var averageAllClick = averageAllBtn.addEventListener("click", function(){
+var allNums = document.getElementsByTagName("select")[0];
+console.log(allNums);
+var averageAnswer = averagePrice(allNums);
+console.log(averageAnswer);
+  answerBtn.innerHTML = averageAnswer;
+});
 
-var sumButtonClick = document.getElementsByTagName("sumSelectedBtn").addEventListener("click", selectedSum(select))
-selectedNums = document,getElementsByTagName("select")[0].selectedOptions;
-sumSelectAnswer = answerbox.innerhtm(selectedSum(selectedSums)
-
-
-
-
-
-
-
-
-//SumSelect Values
-function countButtonClick() {
-  answerBtn.innerHTML = numPrices(prices);
-}
-countSelectedBtn.addEventListener("click", numPrices(prices));
-countSelectedBtn.onclick = countButtonClick;
-
-function sumSelectedClick() {
-  answerBtn.innerHTML = selectedSum(prices);
-}
-sumSelectedBtn.addEventListener("click", selectedSum(prices));
-sumSelectedBtn.onclick = sumSelectedClick;
-
+//AverageSelected
+var averageSelectedClick = averageSelectedBtn.addEventListener("click", function(){
+var selectedNums = document.getElementsByTagName("select")[0];
+var getSelectedOptions = selectedNums.selectedOptions;
+console.log(getSelectedOptions);
+var selectedAnswer = averagePrice(getSelectedOptions);
+console.log(selectedAnswer);
+  answerBtn.innerHTML = selectedAnswer;
+});
