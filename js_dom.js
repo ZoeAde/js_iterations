@@ -10,13 +10,29 @@ var averageSelectedBtn = document.getElementById('average-selected');
 
 var answerBtn = document.getElementById('answer-box');
 
-var prices = document.getElementsByClassName('all-prices text-right');
+var prices = document.getElementsByTagName('option');
 
-sumAllBtn.onclick = function(prices) {
-  //add all values together
-  var pricesArray = prices[0][0].value;
-  var sumAllTotal = sumAll(prices);
-  //return answer to answerbox
-  answerBtn.innerHTML = "sumAllTotal";
-  return sumAllTotal;
+//SumAll Values
+function sumButtonClick() {
+  answerBtn.innerHTML = sumAll(prices);
+}
+sumAllBtn.addEventListener("click", sumAll(prices));
+sumAllBtn.onclick = sumButtonClick;
+
+
+//SumSelect Values
+function countButtonClick() {
+  answerBtn.innerHTML = numPrices(prices);
+}
+countSelectedBtn.addEventListener("click", numPrices(prices);
+sumAllBtn.onclick = countButtonClick;
+
+
+
+var numPrices = function(options) {
+  var count = 0;
+    for (var i = 1; count < options.length; i++) {
+    count += i;
+  }
+  return count;
 };

@@ -1,12 +1,13 @@
 //Users can see the sum of all prices
+
 var sumAll = function(options) {
   var total = 0;
-    for (var i = 0; i < options.length; i++) {
-    total += options[i];
+  for (var i = 0; i < options.length; i++) {
+    total += parseInt(options[i].value);
     }
-    return total;
+  return total;
   };
-sumAll();
+
 
 //Users can see the number of prices that are selected (the count)
 var numPrices = function(options) {
@@ -16,7 +17,7 @@ var numPrices = function(options) {
   }
   return count;
 };
-numPrices();
+
 
 //Users can see the sum of the selected prices
 var selectedSum = function(selectedPrices) {
@@ -26,7 +27,7 @@ var selectedSum = function(selectedPrices) {
     }
     return totalSelected;
   };
-selectedSum();
+
 
 //Users can see the average of all of the prices
 var averagePrice = function(options) {
@@ -38,12 +39,22 @@ var averagePrice = function(options) {
     }
   return average;
 };
-averagePrice();
+
+var splitString = function(string) {
+  var arrayOfStrings = string.split(',');
+  return arrayOfStrings;
+}
 
 
-//NAMES functions
-
-
+// var stringToArray = function(string) {
+//   var separateString = string.split(",");
+//   var i = 1;
+//   newStringArray = [];
+//   while (i < string.length) {
+//     newStringArray.push(seperateString[i]);
+//   }
+//   return newStringArray;
+// };
 
 
 
