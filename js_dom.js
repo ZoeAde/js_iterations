@@ -20,10 +20,29 @@ sumAllBtn.addEventListener("click", sumAll(prices));
 sumAllBtn.onclick = sumButtonClick;
 
 
+
+
+var sumButtonClick = document.getElementsByTagName("sumSelectedBtn").addEventListener("click", selectedSum(select))
+selectedNums = document,getElementsByTagName("select")[0].selectedOptions;
+sumSelectAnswer = answerbox.innerhtm(selectedSum(selectedSums)
+
+
+
+
+
+
+
+
 //SumSelect Values
 function countButtonClick() {
   answerBtn.innerHTML = numPrices(prices);
 }
 countSelectedBtn.addEventListener("click", numPrices(prices));
 countSelectedBtn.onclick = countButtonClick;
+
+function sumSelectedClick() {
+  answerBtn.innerHTML = selectedSum(prices);
+}
+sumSelectedBtn.addEventListener("click", selectedSum(prices));
+sumSelectedBtn.onclick = sumSelectedClick;
 
